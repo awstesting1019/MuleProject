@@ -11,3 +11,5 @@ pipeline {
         sh 'mvn deploy -P standalone -Dmule.home=/opt/mule'
       }
     }
+  }
+}  
