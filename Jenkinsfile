@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven '3.8.1'
+    maven '3.6.3'
   }
   stages {
     stage('Unit Test') {
@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Deploy Standalone') {
       steps {
-        sh 'mvn deploy -P standalone -Dmule.home=/opt/mule'
+        sh 'mvn deploy -P standalone -Dmule.home=/bin/mule'
       }
     }
   }
