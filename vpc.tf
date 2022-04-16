@@ -5,9 +5,7 @@
 #}
 
 
-variable "key_name" {
-  default = "ec2Key"
-}
+variable "ec2-key" {}
 
 variable "ami"{
     default="ami-03ededff12e34e59e"
