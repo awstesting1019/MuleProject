@@ -65,7 +65,7 @@ resource "aws_route_table" "public-rt" {
 
 
 resource "aws_security_group" "allow_ssh" {
-  name        = "allow_all_ssh1"
+  name        = "allow_all_ssh"
   description = "Allow all inbound ssh traffic "
 
   ingress {
@@ -76,7 +76,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_all_ssh1"
+    Name = "allow_all_ssh"
   }
 }
 
