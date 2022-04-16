@@ -6,8 +6,11 @@ provider "aws" {
   region     = "us-east-1"
 }
 
-
-variable "ec2-key" {}
+resource "aws_key_pair" "MuleRuntime" {
+  key_name = "MuleRuntime"
+  public_key = "MuleRuntime.pub"
+}
+#variable "ec2-key" {}
 
 variable "ami"{
     default="ami-03ededff12e34e59e"
@@ -87,7 +90,7 @@ resource "aws_security_group" "allow_ssh" {
 resource "aws_instance" "example" {
   ami = "${var.ami}"
   instance_type = "t2.micro"
-  key_name = "${var.ec2-key}"
+ # key_name = "${var.ec2-key}"
   vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
 
   tags = {
