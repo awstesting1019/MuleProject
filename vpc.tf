@@ -33,7 +33,7 @@ resource "aws_internet_gateway" "igw" {
 
 
 resource "aws_subnet" "private-subnet" {
-  vpc_id     = "${aws_vpc.july-vpc.id}"
+  vpc_id     = "${aws_vpc.terr-vpc.id}"
   cidr_block = "10.0.1.0/24"
 
   tags {
@@ -42,7 +42,7 @@ resource "aws_subnet" "private-subnet" {
 }
 
 resource "aws_subnet" "public-subnet" {
-  vpc_id     = "${aws_vpc.july-vpc.id}"
+  vpc_id     = "${aws_vpc.terr-vpc.id}"
   cidr_block = "10.0.2.0/24"
 
   tags {
@@ -51,7 +51,7 @@ resource "aws_subnet" "public-subnet" {
 }
 
 resource "aws_route_table" "public-rt" {
-  vpc_id     = "${aws_vpc.july-vpc.id}"
+  vpc_id     = "${aws_vpc.terr-vpc.id}"
 
   route {
     cidr_block = "0.0.0.0/0"
