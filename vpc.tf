@@ -6,7 +6,9 @@ provider "aws" {
   region     = "us-east-1"
 }
 
-variable "ec2-key" {}
+variable "ec2-key" {
+    default="terr"
+}
 
 variable "ami"{
     default="ami-03ededff12e34e59e"
