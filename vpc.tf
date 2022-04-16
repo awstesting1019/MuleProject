@@ -16,7 +16,7 @@ variable "ami"{
 resource "aws_vpc" "terr-vpc" {
   cidr_block       = "10.0.0.0/16"
 
-  tags {
+  tags = {
     Name = "terr-vpc"
   }
 }
@@ -24,7 +24,7 @@ resource "aws_vpc" "terr-vpc" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = "${aws_vpc.terr-vpc.id}"
 
-  tags {
+  tags = {
     Name = "terraform-IGW"
   }
 }
@@ -35,7 +35,7 @@ resource "aws_subnet" "private-subnet" {
   vpc_id     = "${aws_vpc.terr-vpc.id}"
   cidr_block = "10.0.1.0/24"
 
-  tags {
+  tags = {
     Name = "private-subnet-10.0.1.0/24"
   }
 }
@@ -44,7 +44,7 @@ resource "aws_subnet" "public-subnet" {
   vpc_id     = "${aws_vpc.terr-vpc.id}"
   cidr_block = "10.0.2.0/24"
 
-  tags {
+  tags = {
     Name = "public-subnet-10.0.2.0/24"
   }
 }
@@ -59,7 +59,7 @@ resource "aws_route_table" "public-rt" {
 
 
 
-  tags {
+  tags = {
     Name = "private-subnet-10.0.1.0/24"
   }
 }
@@ -77,7 +77,7 @@ resource "aws_security_group" "allow_ssh" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name = "allow_all_ssh"
   }
 }
@@ -90,7 +90,7 @@ resource "aws_instance" "web-server" {
   key_name = "${var.ec2-key}"
   vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
 
-  tags {
+  tags = {
     Name = "terraform-web-server"
   }
 }
