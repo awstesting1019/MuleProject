@@ -8,7 +8,7 @@ provider "aws" {
 variable "ec2-key" {}
 
 variable "ami"{
-    default="ami-03ededff12e34e59e""
+    default="ami-03ededff12e34e59e"
 }
 
 resource "aws_vpc" "terr-vpc" {
