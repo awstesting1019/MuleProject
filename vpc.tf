@@ -1,8 +1,10 @@
 
 
-#provider "aws" {
-#  region = "us-east-1"
-#}
+provider "aws" {
+  access_key = "AKIAVYSNLTQT47EI4LHI"
+  secret_key = "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"
+  region     = "us-east-1"
+}
 
 
 variable "ec2-key" {}
@@ -82,13 +84,13 @@ resource "aws_security_group" "allow_ssh" {
 
 
 
-resource "aws_instance" "web-server" {
+resource "aws_instance" "example" {
   ami = "${var.ami}"
   instance_type = "t2.micro"
   key_name = "${var.ec2-key}"
   vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
 
   tags = {
-    Name = "terraform-web-server"
+    Name = "example"
   }
 }
