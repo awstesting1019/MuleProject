@@ -23,7 +23,7 @@ resource "aws_vpc" "terr-vpc" {
 }
 
 resource "aws_internet_gateway" "igw" {
-  vpc_id = "${aws_vpc.july-vpc.id}"
+  vpc_id = "${aws_vpc.terr-vpc.id}"
 
   tags {
     Name = "terraform-IGW"
