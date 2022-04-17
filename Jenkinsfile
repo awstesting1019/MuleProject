@@ -5,14 +5,9 @@ pipeline {
       jdk 'JAVA_HOME' 
     }
   stages {
-    stage('Unit Test') {
+    stage('Build Stage') {
       steps {
-        sh 'mvn clean test'
-      }
-    }
-    stage('Deploy Standalone') {
-      steps {
-        sh 'mvn deploy -P standalone -Dmule.home=/bin/mule'
+        sh 'mvn clean package'
       }
     }
   }
