@@ -50,7 +50,7 @@
                                                 <targetType>server</targetType>
                                                 <username>awstesting1019</username>
                                                 <password>Dallas2022@</password>
-                                                <environment>Design</environment>
+                                                <environment>Sandbox</environment>
                                         </armDeployment>
                                         <classifier>mule-application</classifier>
                                 </configuration>
