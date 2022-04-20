@@ -46,7 +46,7 @@
                                         <armDeployment>
                                                 <muleVersion>${app.runtime}</muleVersion>
                                                 <uri>https://anypoint.mulesoft.com</uri>
-                                                <target>mule-linux</target>
+                                                <target>mule-test</target>
                                                 <targetType>server</targetType>
                                                 <username>awstesting1019</username>
                                                 <password>Dallas2022@</password>
