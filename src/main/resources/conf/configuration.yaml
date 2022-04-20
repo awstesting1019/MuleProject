@@ -1,6 +1,6 @@
 mysql:
-  host: ""
-  port: ""
-  user: ""
-  password: ""
-  database: ""
+  host: "ip-10-2-1-54.ec2.internal"
+  port: "3306"
+  user: "root"
+  password: "muledb12"
+  database: "muledb"
