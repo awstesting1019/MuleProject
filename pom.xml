@@ -52,7 +52,7 @@
                                                 <password>Elkridge2019$</password>
                                                 <environment>Sandbox</environment>
                                         </armDeployment>
-                                        <classifier>mule-application</classifier>
+                                        <classifier>mule-application2</classifier>
                                 </configuration>
                         </plugin>
                 </plugins>
